@@ -55,6 +55,6 @@ public class TitleScreenIdle : MonoBehaviour
             isPlayingVideo = false;
             videoPlayer.Stop();
             videoPlayer.gameObject.SetActive(false);
-             rawImage.enabled = false;
+            rawImage.enabled = false;
         }
 }
