@@ -13,4 +13,9 @@ MonoBehaviour:
   m_Name: STORY
   m_EditorClassIdentifier: 
   storyTitle: 
-  scenes: []
+  scenes:
+  - {fileID: 11400000, guid: 4c07c3eb6e65a51499315cf211115925, type: 2}
+  - {fileID: 11400000, guid: 7b2ddf19a026d0b48a0505135dccccae, type: 2}
+  - {fileID: 11400000, guid: c799e4ce26f3611448788c4944ba2909, type: 2}
+  - {fileID: 11400000, guid: 9c6ad2febc0df3941af6cece350aecbc, type: 2}
+  - {fileID: 11400000, guid: c91e20d28bcdfd34ea993f9c1a36063f, type: 2}

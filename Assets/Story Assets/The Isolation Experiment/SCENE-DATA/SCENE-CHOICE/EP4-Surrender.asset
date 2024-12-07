@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choiceText: Surrender
   videoClip: {fileID: 0}
-  nextScene: {fileID: 0}
+  nextScene: {fileID: 11400000, guid: c91e20d28bcdfd34ea993f9c1a36063f, type: 2}

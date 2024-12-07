@@ -58,7 +58,7 @@ public class ChoiceController : MonoBehaviour
         {
             HandleSwipe();
         }
-        
+
         // Smoothly interpolate the button position to the target position
         controllerButton.anchoredPosition = Vector2.Lerp(
             controllerButton.anchoredPosition,
@@ -186,5 +186,11 @@ public class ChoiceController : MonoBehaviour
     {
         Debug.Log("Set Video to Not Playing");
         isVideoPlaying = false; // Mark video as stopped
+
+        // If there are no choices, show the end of story prompt
+        if (currentScene != null && currentScene.choices.Length == 0)
+        {
+            sceneManagerController.ShowEndOfStoryPrompt();
+        }
     }
 }
