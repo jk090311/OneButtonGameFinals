@@ -10,6 +10,7 @@ public class SaveDisplayManager : MonoBehaviour
     public GameObject saveEntryPrefab; // Prefab for save entries
     public List<StoryData> allStories; // All available stories
     public TextMeshProUGUI selectedTitleText; // Text to display the selected story title
+    public Image selectedStoryImage;
     public Button deleteGameButton;
     public Button loadGameButton;
     private List<StoryData> savedStoryData;
@@ -59,20 +60,9 @@ public class SaveDisplayManager : MonoBehaviour
                 savedGameButton.onClick.AddListener(() =>
                 {
                     Debug.Log($"{story.Title}");
-                    UpdateSelectedDetails(story.Title, story.Title); // Update the title display
+                    UpdateSelectedDetails(story.Title, story.Title, story.StoryImage); // Update the title display
                 });
             }
-
-            // // Add functionality to the Delete button
-            // Button deleteButton = saveEntry.transform.Find("DeleteGameProgressButton").GetComponent<Button>();
-            // if (deleteButton != null)
-            // {
-            //     deleteButton.onClick.AddListener(() =>
-            //     {
-            //         Debug.Log($"Deleting {story.Title}");
-            //         DeleteSavedStory(story);
-            //     });
-            // }
         }
     }
 
@@ -99,12 +89,14 @@ public class SaveDisplayManager : MonoBehaviour
     }
 
     // Update the UI text to show the selected story title
-    void UpdateSelectedDetails(string title, string storyID)
+    void UpdateSelectedDetails(string title, string storyID, Sprite storyImage)
     {
         if (selectedTitleText != null)
         {
-            selectedTitleText.text = $"Selected Story: {title}";
+            selectedTitleText.text = $"{title}";
         }
+
+        selectedStoryImage.sprite = storyImage;
 
         StoryData storyData = savedStoryData.Find(story => story.storyTitle == storyID);
         if (storyData == null)

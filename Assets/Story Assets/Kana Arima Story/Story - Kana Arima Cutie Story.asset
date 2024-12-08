@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629d685674f504945a8a9dedd6922f61, type: 3}
   m_Name: Story - Kana Arima Cutie Story
   m_EditorClassIdentifier: 
+  posterImage: {fileID: 21300000, guid: cf76dc2c0e8277442badf21a045dc2a1, type: 3}
   storyTitle: Kana Arima
+  synopsis: This is Kana Arima's Random Shots
   scenes:
   - {fileID: 11400000, guid: 3b88a8d130fbe6b4f9d6f62b3c8e7049, type: 2}
   - {fileID: 11400000, guid: c37d3dac06acda4428dab6fc6814e007, type: 2}
