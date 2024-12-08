@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class SaveSceneManager : MonoBehaviour
@@ -11,6 +12,7 @@ public class SaveSceneManager : MonoBehaviour
 
         SavedStoryData data = new SavedStoryData
         {
+            StoryImage = story.posterImage,
             StoryID = story.storyTitle,
             SceneIndex = sceneIndex,
             Title = story.storyTitle,
@@ -75,6 +77,7 @@ public class SaveSceneManager : MonoBehaviour
 [System.Serializable]
 public struct SavedStoryData
 {
+    public Sprite StoryImage;
     public string StoryID;
     public int SceneIndex;
     public string Title;

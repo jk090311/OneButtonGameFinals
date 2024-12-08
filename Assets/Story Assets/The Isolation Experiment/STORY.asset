@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629d685674f504945a8a9dedd6922f61, type: 3}
   m_Name: STORY
   m_EditorClassIdentifier: 
+  posterImage: {fileID: 21300000, guid: 4e82a27d84bf69d468e98359561dd1a3, type: 3}
   storyTitle: The Isolation Experiment
+  synopsis: "Trapped in a room for a 24-hour experiment, you face growing paranoia,
+    strange sounds, and cryptic clues. Can you keep your sanity and escape, or will
+    the isolation consume you? Your actions decide whether you break free or become
+    another victim of the experiment\u2019s sinister secrets. "
   scenes:
   - {fileID: 11400000, guid: 4c07c3eb6e65a51499315cf211115925, type: 2}
   - {fileID: 11400000, guid: 7b2ddf19a026d0b48a0505135dccccae, type: 2}

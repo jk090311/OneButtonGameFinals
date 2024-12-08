@@ -16,7 +16,7 @@ public class ChoiceController : MonoBehaviour
     private Vector2 targetPosition; // Target position for smoother animation
     private bool isSwiping = false;
     private bool isSliding = false; // To prevent confirmation during sliding
-    private bool isVideoPlaying = true; // To track if a video is playing
+    public static bool isVideoPlaying = true; // To track if a video is playing
     private float smoothFactor = 5f; // Adjust for smoothness (higher = faster)
     public SceneManagerController sceneManagerController; // Reference to SceneManagerController
     private SceneData currentScene; // Current scene being played
@@ -184,11 +184,15 @@ public class ChoiceController : MonoBehaviour
     {
         Debug.Log("Set Video to Not Playing");
         isVideoPlaying = false; // Mark video as stopped
-
         // If there are no choices, show the end of story prompt
         if (currentScene != null && currentScene.choices.Length == 0)
         {
             sceneManagerController.ShowEndOfStoryPrompt();
+            EnableChoicesContainer(true);
+        }
+        else 
+        {
+            EnableChoicesContainer(isVideoPlaying);
         }
     }
 }
