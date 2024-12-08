@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629d685674f504945a8a9dedd6922f61, type: 3}
   m_Name: STORY
   m_EditorClassIdentifier: 
-  storyTitle: 
+  storyTitle: The Isolation Experiment
   scenes:
   - {fileID: 11400000, guid: 4c07c3eb6e65a51499315cf211115925, type: 2}
   - {fileID: 11400000, guid: 7b2ddf19a026d0b48a0505135dccccae, type: 2}

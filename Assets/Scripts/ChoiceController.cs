@@ -12,14 +12,12 @@ public class ChoiceController : MonoBehaviour
     public Vector2 leftPosition; // Position for highlighting Choice 1
     public Vector2 rightPosition; // Position for highlighting Choice 2
     private int selectedChoice = 1; // 1 = Choice 1, 2 = Choice 2
-
     private Vector2 startTouchPosition;
     private Vector2 targetPosition; // Target position for smoother animation
     private bool isSwiping = false;
     private bool isSliding = false; // To prevent confirmation during sliding
     private bool isVideoPlaying = true; // To track if a video is playing
     private float smoothFactor = 5f; // Adjust for smoothness (higher = faster)
-
     public SceneManagerController sceneManagerController; // Reference to SceneManagerController
     private SceneData currentScene; // Current scene being played
 
@@ -32,6 +30,21 @@ public class ChoiceController : MonoBehaviour
         {
             if (!isSliding && !isVideoPlaying) ConfirmChoice();
         });
+    }
+
+    void Update()
+    {
+        if (!isVideoPlaying) // Prevent sliding while video is playing
+        {
+            HandleSwipe();
+        }
+
+        // Smoothly interpolate the button position to the target position
+        controllerButton.anchoredPosition = Vector2.Lerp(
+            controllerButton.anchoredPosition,
+            targetPosition,
+            Time.deltaTime * smoothFactor
+        );
     }
 
     public void Initialize(SceneData scene, SceneManagerController manager)
@@ -50,21 +63,6 @@ public class ChoiceController : MonoBehaviour
         {
             Debug.LogError("No choices available for this scene.");
         }
-    }
-
-    void Update()
-    {
-        if (!isVideoPlaying) // Prevent sliding while video is playing
-        {
-            HandleSwipe();
-        }
-
-        // Smoothly interpolate the button position to the target position
-        controllerButton.anchoredPosition = Vector2.Lerp(
-            controllerButton.anchoredPosition,
-            targetPosition,
-            Time.deltaTime * smoothFactor
-        );
     }
 
     void HandleSwipe()

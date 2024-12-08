@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\SceneManagerController.cs" />
     <Compile Include="Assets\Scripts\VideoPlayerController.cs" />
     <Compile Include="Assets\Scripts\TitleScreenIdle.cs" />
+    <Compile Include="Assets\Scripts\SaveDisplayManager.cs" />
     <Compile Include="Assets\StorySystem\ScriptableObjects\StoryData.cs" />
     <Compile Include="Assets\Scripts\UnitySceneManager.cs" />
     <Compile Include="Assets\StorySystem\ScriptableObjects\SceneData.cs" />
@@ -1129,5 +1130,8 @@
     <ProjectCapability Remove="ReferenceManagerCOM" />
     <ProjectCapability Remove="AssemblyReferences" />
     <ProjectCapability Remove="ReferenceManagerAssemblies" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AudioSwitcher.AudioApi.CoreAudio" Version="3.0.3" />
   </ItemGroup>
 </Project>

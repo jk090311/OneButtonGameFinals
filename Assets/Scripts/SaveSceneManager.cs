@@ -1,47 +1,82 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SaveSceneManager : MonoBehaviour
 {
-    private const string CurrentSceneKey = "CurrentSceneIndex";
-    private const string CurrentStoryKey = "CurrentStoryID";
-
-    // Save the current scene and story
-    public static void SaveCurrentScene(string storyID, int sceneIndex)
+    // Save a story's progress
+    public static void SaveStoryData(StoryData story, int sceneIndex)
     {
-        PlayerPrefs.SetString(CurrentStoryKey, storyID); // Save story ID
-        PlayerPrefs.SetInt(CurrentSceneKey, sceneIndex); // Save scene index
-        PlayerPrefs.Save(); // Write changes to disk
-        Debug.Log($"Saved Story ID: {storyID}, Scene Index: {sceneIndex}");
+        string storyKey = $"{story.storyTitle}_Data";
+
+        SavedStoryData data = new SavedStoryData
+        {
+            StoryID = story.storyTitle,
+            SceneIndex = sceneIndex,
+            Title = story.storyTitle,
+            Timestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds()
+        };
+
+        string json = JsonUtility.ToJson(data);
+        PlayerPrefs.SetString(storyKey, json);
+        PlayerPrefs.Save();
+
+        Debug.Log($"Saved Story: {story.storyTitle}, Scene Index: {sceneIndex}");
     }
 
-    // Load the saved scene index for a given story
-    public static int LoadCurrentScene(string storyID)
+    // Load a story's saved data
+    public static SavedStoryData LoadStoryData(string storyID)
     {
-        if (PlayerPrefs.HasKey(CurrentStoryKey) && PlayerPrefs.HasKey(CurrentSceneKey))
+        string storyKey = $"{storyID}_Data";
+
+        if (PlayerPrefs.HasKey(storyKey))
         {
-            string savedStoryID = PlayerPrefs.GetString(CurrentStoryKey);
-            if (savedStoryID == storyID)
+            string json = PlayerPrefs.GetString(storyKey);
+            return JsonUtility.FromJson<SavedStoryData>(json);
+        }
+
+        // Return default if no data exists
+        return default;
+    }
+
+    // Get all saved stories
+    public static List<SavedStoryData> GetAllSavedStories(List<StoryData> stories)
+    {
+        List<SavedStoryData> savedStories = new List<SavedStoryData>();
+
+        foreach (var story in stories)
+        {
+            string storyKey = $"{story.storyTitle}_Data";
+
+            if (PlayerPrefs.HasKey(storyKey))
             {
-                return PlayerPrefs.GetInt(CurrentSceneKey);
+                string json = PlayerPrefs.GetString(storyKey);
+                SavedStoryData data = JsonUtility.FromJson<SavedStoryData>(json);
+                savedStories.Add(data);
             }
         }
 
-        // If no saved data exists or story ID doesn't match, return 0 (start from the first scene)
-        return 0;
+        savedStories.Sort((a, b) => b.Timestamp.CompareTo(a.Timestamp));
+
+        return savedStories;
     }
 
-    // Check if there is saved data for a particular story
-    public static bool HasSaveData(string storyID)
-    {
-        return PlayerPrefs.HasKey(CurrentStoryKey) && PlayerPrefs.HasKey(CurrentSceneKey) && PlayerPrefs.GetString(CurrentStoryKey) == storyID;
-    }
-
-    // Clear saved data for the current story
+    // Clear saved data for a specific story
     public static void ClearSavedData(string storyID)
     {
-        PlayerPrefs.DeleteKey(storyID);
-        PlayerPrefs.DeleteKey(CurrentSceneKey);
+        string storyKey = $"{storyID}_Data";
+        PlayerPrefs.DeleteKey(storyKey);
         PlayerPrefs.Save();
-        Debug.Log("Cleared saved story and scene data.");
+        Debug.Log($"Cleared saved data for story: {storyID}");
     }
+}
+
+// Struct to store saved data
+[System.Serializable]
+public struct SavedStoryData
+{
+    public string StoryID;
+    public int SceneIndex;
+    public string Title;
+    public long Timestamp; // Use Unix time for easy sorting
 }

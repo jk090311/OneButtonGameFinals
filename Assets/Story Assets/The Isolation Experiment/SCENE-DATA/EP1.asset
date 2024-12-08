@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EP1
   m_EditorClassIdentifier: 
   sceneName: 
-  introVideo: {fileID: 0}
+  introVideo: {fileID: 32900000, guid: 41ee29043f548364a8a668f222cc260b, type: 3}
   choices:
   - {fileID: 11400000, guid: fe2824e6cd0b98844b7134e159e805dd, type: 2}
   - {fileID: 11400000, guid: 1f5c5560d72ae18449a30a3e455e4e19, type: 2}

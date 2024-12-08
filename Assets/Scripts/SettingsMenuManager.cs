@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
-using TMPro;
 
 public class SettingsMenuManager : MonoBehaviour
 {
@@ -27,15 +24,5 @@ public class SettingsMenuManager : MonoBehaviour
     {
         float mappedVolume = Mathf.Lerp(-80f, 0f, sfxVol.value);
         mainAudioMixer.SetFloat("SFXVol",sfxVol.value);
-    }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

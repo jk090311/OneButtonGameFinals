@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Video;
 
 public class VideoPlayerController : MonoBehaviour
@@ -64,6 +63,7 @@ public class VideoPlayerController : MonoBehaviour
             Debug.Log("No Transition Clip. Loading next scene directly.");
             if (choice.nextScene != null)
             {
+                SceneManagerController.currentSceneIndex++;
                 sceneManagerController.LoadScene(choice.nextScene);
             }
             else
@@ -72,7 +72,6 @@ public class VideoPlayerController : MonoBehaviour
             }
         }
     }
-
 
     private void OnVideoEnd(VideoPlayer vp)
     {
