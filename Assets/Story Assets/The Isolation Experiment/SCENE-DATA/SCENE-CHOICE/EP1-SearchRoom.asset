@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25e33bb4abc9fe44d82f3d8c6dcf43ec, type: 3}
   m_Name: EP1-SearchRoom
   m_EditorClassIdentifier: 
-  choiceText: Search the Room Again
+  choiceText: Search the Room
   videoClip: {fileID: 0}
-  nextScene: {fileID: 11400000, guid: 7b2ddf19a026d0b48a0505135dccccae, type: 2}
+  nextScene: {fileID: 11400000, guid: a48b5e9fa6b881842b5d30d8f3606f9b, type: 2}

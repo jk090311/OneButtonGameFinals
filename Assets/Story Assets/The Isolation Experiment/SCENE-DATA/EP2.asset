@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7095639e6851f164a8b4688a2e18dc60, type: 3}
   m_Name: EP2
   m_EditorClassIdentifier: 
-  sceneName: 
-  introVideo: {fileID: 0}
+  sceneName: THE FIRST NIGHT
+  introVideo: {fileID: 32900000, guid: 52307c4d01a3be34892adad575436dc1, type: 3}
   choices:
-  - {fileID: 11400000, guid: 4afaccb147f6a5c49bbe76692fc6773d, type: 2}
-  - {fileID: 11400000, guid: 5ca5fb5833ccc4a47804c78500cd4463, type: 2}
+  - {fileID: 11400000, guid: 8be8ded786b08164daa761094cc858d8, type: 2}
+  - {fileID: 11400000, guid: 8be8ded786b08164daa761094cc858d8, type: 2}

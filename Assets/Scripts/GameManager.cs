@@ -8,6 +8,7 @@ using UnityEngine.Video;
 public class GameManager : MonoBehaviour
 {
     public VideoPlayer videoPlayer; // Assign your VideoPlayer from the Title Panel
+    public TitleScreenIdle titleScreenIdle;
     public AudioSource musicSource; // Assign your AudioSource from the Settings Panel
     private bool wasMusicPlayingBeforeVideo; // Track if the music was playing
 
@@ -47,10 +48,10 @@ public class GameManager : MonoBehaviour
         }
 
         // Resume the music if it was playing before
-        if (wasMusicPlayingBeforeVideo && musicSource != null)
+        if (titleScreenIdle.isPlayingVideo && musicSource != null)
         {
             Debug.Log("BGM UNPAUSE");
-            musicSource.UnPause();
+            musicSource.Play();
         }
     }
 

@@ -48,8 +48,10 @@ public class VideoPlayerController : MonoBehaviour
             // Subscribe to event for when the video ends
             videoPlayer.loopPointReached += (VideoPlayer vp) =>
             {
+                Debug.Log("Intro Video Finished");
                 if (choice.nextScene != null)
                 {
+                    Debug.Log("Loading Next Scene.........");
                     sceneManagerController.LoadScene(choice.nextScene);
                 }
                 else

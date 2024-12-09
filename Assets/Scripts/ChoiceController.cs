@@ -52,16 +52,35 @@ public class ChoiceController : MonoBehaviour
         currentScene = scene;
         sceneManagerController = manager;
 
-        // Update choice texts
-        if (scene.choices.Length > 0)
+        if (currentScene != null && currentScene.choices.Length != 0)
         {
-            choice1Text.text = scene.choices[0].choiceText;
-            if (scene.choices.Length > 1)
-                choice2Text.text = scene.choices[1].choiceText;
+            // Update choice texts
+            if (scene.choices.Length > 0)
+            {
+                choice1Text.text = scene.choices[0].choiceText;
+                if (scene.choices.Length > 1)
+                {
+                    if (scene.choices[1] != null)
+                    {
+                        choice2Text.text = scene.choices[1].choiceText;   
+                    }
+                    else
+                    {
+                        choice2Text.text = "";
+                    }
+                    return;
+                }
+                return;
+
+            }
+            else
+            {
+                Debug.LogError("No choices available for this scene.");
+            }
         }
         else
         {
-            Debug.LogError("No choices available for this scene.");
+            return;
         }
     }
 

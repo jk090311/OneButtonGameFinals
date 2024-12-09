@@ -8,9 +8,10 @@ public class TitleScreenIdle : MonoBehaviour
 {
     public float inactivityDuration = 10f;
     public VideoPlayer videoPlayer;
+    public GameManager gameManager;
     public RawImage rawImage;
     private float  inactivityTimer = 0f;
-    private bool isPlayingVideo = false;
+    public bool isPlayingVideo = false;
 
     void Start()
     {
@@ -56,5 +57,7 @@ public class TitleScreenIdle : MonoBehaviour
             videoPlayer.Stop();
             videoPlayer.gameObject.SetActive(false);
             rawImage.enabled = false;
+            Debug.Log("HAHA");
+            gameManager.musicSource.UnPause();
         }
 }

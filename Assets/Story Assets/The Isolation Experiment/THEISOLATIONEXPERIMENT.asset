@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 629d685674f504945a8a9dedd6922f61, type: 3}
+  m_Name: THEISOLATIONEXPERIMENT
+  m_EditorClassIdentifier: 
+  posterImage: {fileID: 0}
+  storyTitle: The Isolation Experiment
+  synopsis: 
+  scenes:
+  - {fileID: 11400000, guid: 121a70a35c0010542b43702db34e3b80, type: 2}
+  - {fileID: 11400000, guid: a48b5e9fa6b881842b5d30d8f3606f9b, type: 2}
+  - {fileID: 11400000, guid: 95f5a2aa6ba5a574085a707539a45c08, type: 2}
+  - {fileID: 11400000, guid: afbc1d9b487bdc4458b6f99f0e0c98cc, type: 2}
+  - {fileID: 11400000, guid: 9682f9d6b7f176f48a37d665fb6c33a7, type: 2}
+  - {fileID: 11400000, guid: 163482de855c40341b672f5a8593d3d1, type: 2}
+  - {fileID: 11400000, guid: b568a2e71aa558d41b8af93abbcc90d2, type: 2}

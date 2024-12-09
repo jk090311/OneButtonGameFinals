@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7095639e6851f164a8b4688a2e18dc60, type: 3}
   m_Name: EP1
   m_EditorClassIdentifier: 
-  sceneName: 
-  introVideo: {fileID: 32900000, guid: 41ee29043f548364a8a668f222cc260b, type: 3}
+  sceneName: The Isolation
+  introVideo: {fileID: 32900000, guid: bf6dd8ab97d28fb4dba3ebb03ebe84f4, type: 3}
   choices:
-  - {fileID: 11400000, guid: fe2824e6cd0b98844b7134e159e805dd, type: 2}
-  - {fileID: 11400000, guid: 1f5c5560d72ae18449a30a3e455e4e19, type: 2}
+  - {fileID: 11400000, guid: 4a3c72a6ddbc58a48a90c881cfeab18e, type: 2}
+  - {fileID: 11400000, guid: 0c54994dfb27f1849be3e70caf9e366c, type: 2}

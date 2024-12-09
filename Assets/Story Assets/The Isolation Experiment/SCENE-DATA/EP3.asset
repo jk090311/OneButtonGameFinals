@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7095639e6851f164a8b4688a2e18dc60, type: 3}
   m_Name: EP3
   m_EditorClassIdentifier: 
-  sceneName: 
-  introVideo: {fileID: 0}
+  sceneName: THE SECOND DAY
+  introVideo: {fileID: 32900000, guid: 3cd726177a50c9f4fbe492786b823c3d, type: 3}
   choices:
-  - {fileID: 11400000, guid: f454f016addc8b0458b314192b2133ba, type: 2}
-  - {fileID: 11400000, guid: 7bab50331b040124497940df36425af9, type: 2}
+  - {fileID: 11400000, guid: 4c534efffa6390f4689d730bf8b9bdb1, type: 2}
+  - {fileID: 11400000, guid: 1bd9721a9f6e2c1499b40ba2001579a4, type: 2}
