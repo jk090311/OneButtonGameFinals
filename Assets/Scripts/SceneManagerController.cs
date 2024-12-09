@@ -1,23 +1,21 @@
+using TMPro;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class SceneManagerController : MonoBehaviour
 {
     public static StoryData currentStory; // The active story
-    public VideoPlayerController videoPlayerController; // Reference to the VideoPlayerController
     public static int currentSceneIndex; // Tracks the current scene index
+    public VideoPlayerController videoPlayerController; // Reference to the VideoPlayerController
+    public ChoiceController choiceController;
+    public GameplayManager gameplayManager;
+    public VideoPlayer videoPlayer;
     public Animator endPromptPanelAnimator;
-    public Button backOrSaveButton;
 
     void Start()
     {
-        backOrSaveButton.onClick.AddListener(() =>
-        {
-            // For Saving
-            SaveSceneManager.SaveStoryData(currentStory, currentSceneIndex);
-            UnitySceneManager.StaticLoadScene("TitleScreen");
-        });
         if (currentStory != null && currentStory.scenes.Length > 0)
         {
             if (TransitionManager.isNewGame)
@@ -36,10 +34,7 @@ public class SceneManagerController : MonoBehaviour
         }
     }
 
-    public static void AssignStory(StoryData story)
-    {
-        currentStory = story;
-    }
+    public static void AssignStory(StoryData story) => currentStory = story;
 
     public void LoadScene(SceneData scene)
     {
@@ -48,6 +43,8 @@ public class SceneManagerController : MonoBehaviour
         if (videoPlayerController != null)
         {
             videoPlayerController.PlayScene(scene);
+            gameplayManager.isCurrentSaved = false;
+            gameplayManager.SaveButtonState();
         }
         else
         {
@@ -66,5 +63,6 @@ public class SceneManagerController : MonoBehaviour
     {
         TransitionManager.EndingPromptClose(endPromptPanelAnimator);
         currentSceneIndex = 0;
+        ChoiceController.isVideoPlaying = true;
     }
 }

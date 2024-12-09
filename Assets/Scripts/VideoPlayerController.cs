@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Video;
 
 public class VideoPlayerController : MonoBehaviour
@@ -63,7 +64,6 @@ public class VideoPlayerController : MonoBehaviour
             Debug.Log("No Transition Clip. Loading next scene directly.");
             if (choice.nextScene != null)
             {
-                SceneManagerController.currentSceneIndex++;
                 sceneManagerController.LoadScene(choice.nextScene);
             }
             else
@@ -77,10 +77,5 @@ public class VideoPlayerController : MonoBehaviour
     {
         choiceController.OnVideoEnd(); // Notify ChoiceController
         Debug.Log("Video ended.");
-        // Optionally trigger actions at the end of the intro video, such as enabling choices
-        if (choiceController != null)
-        {
-            choiceController.EnableChoicesContainer(false);
-        }
     }
 }

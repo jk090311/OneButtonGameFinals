@@ -1,19 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Video;
 
 public class GameManager : MonoBehaviour
 {
     public VideoPlayer videoPlayer; // Assign your VideoPlayer from the Title Panel
     public AudioSource musicSource; // Assign your AudioSource from the Settings Panel
-
     private bool wasMusicPlayingBeforeVideo; // Track if the music was playing
-
 
     void Start()
     {
-        
         videoPlayer.started += OnVideoStarted;
     }
 
