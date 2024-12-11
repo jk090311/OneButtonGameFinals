@@ -11,6 +11,9 @@ public class StoryDetails : MonoBehaviour
     public TextMeshProUGUI synopsis;
     public Image posterImage;
     public Button playButton;
+    public Animator synopsisAnimator;
+    public TransitionManager transitionManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +25,8 @@ public class StoryDetails : MonoBehaviour
         title.text = SceneManagerController.currentStory.storyTitle;
         synopsis.text = SceneManagerController.currentStory.synopsis;
         posterImage.sprite = SceneManagerController.currentStory.posterImage;
+        transitionManager.SetBoolAnimator("isSynopsisOpen");
+        transitionManager.OpenPanel(synopsisAnimator);
     }
 
     IEnumerator StartStoryGame()
