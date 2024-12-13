@@ -16,6 +16,7 @@ public class SceneManagerController : MonoBehaviour
 
     void Start()
     {
+        videoPlayer.clip = null;
         if (currentStory != null && currentStory.scenes.Length > 0)
         {
             if (TransitionManager.isNewGame)

@@ -8,32 +8,6 @@ public class VideoPlayerController : MonoBehaviour
     public ChoiceController choiceController; // Reference to the ChoiceController
     public SceneManagerController sceneManagerController; // Reference to SceneManagerController
 
-    // public void PlayScene(SceneData scene)
-    // {
-    //     if (scene.introVideo != null)
-    //     {
-    //         videoPlayer.clip = scene.introVideo;
-    //         videoPlayer.Play();
-    //     }
-    //     else
-    //     {
-    //         Debug.LogError("No intro video found for this scene.");
-    //     }
-
-    //     // Initialize the ChoiceController for this scene
-    //     if (choiceController != null)
-    //     {
-    //         choiceController.Initialize(scene, sceneManagerController);
-    //     }
-    //     else
-    //     {
-    //         Debug.LogError("ChoiceController not assigned.");
-    //     }
-
-    //     // Handle video end (if needed to trigger other behaviors)
-    //     videoPlayer.loopPointReached += OnVideoEnd;
-    // }
-
     public void PlayScene(SceneData scene)
     {
         videoPlayer.loopPointReached -= OnVideoEnd; // Clear previous event to avoid duplicates

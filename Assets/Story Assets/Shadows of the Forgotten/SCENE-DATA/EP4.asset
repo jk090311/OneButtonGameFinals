@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7095639e6851f164a8b4688a2e18dc60, type: 3}
   m_Name: EP4
   m_EditorClassIdentifier: 
-  sceneName: 
-  introVideo: {fileID: 0}
+  sceneName: The Locked Room
+  introVideo: {fileID: 32900000, guid: 2c735a97e3364e14d8f4a5364fc42c3c, type: 3}
   choices:
   - {fileID: 11400000, guid: dedbbc3132706b54c823265a88309c38, type: 2}
   - {fileID: 11400000, guid: bb93b9c36e5bd2b4dba8d38e966cd4ab, type: 2}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EP4-ReadJournal
   m_EditorClassIdentifier: 
   choiceText: Read the journal
-  videoClip: {fileID: 0}
-  nextScene: {fileID: 0}
+  videoClip: {fileID: 32900000, guid: 46491a698f307d94f8d8f9ef90d40f3e, type: 3}
+  nextScene: {fileID: 11400000, guid: 247b69e5c9d0019468fe1919d7c87eff, type: 2}

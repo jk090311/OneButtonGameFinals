@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -11,6 +12,8 @@ public class SaveDisplayManager : MonoBehaviour
     public List<StoryData> allStories; // All available stories
     public TextMeshProUGUI selectedTitleText; // Text to display the selected story title
     public Image selectedStoryImage;
+    public TextMeshProUGUI genre;
+    public TextMeshProUGUI dateSaved;
     public Button deleteGameButton;
     public Button loadGameButton;
     private List<StoryData> savedStoryData;
@@ -60,7 +63,7 @@ public class SaveDisplayManager : MonoBehaviour
                 savedGameButton.onClick.AddListener(() =>
                 {
                     Debug.Log($"{story.Title}");
-                    UpdateSelectedDetails(story.Title, story.Title, story.StoryImage); // Update the title display
+                    UpdateSelectedDetails(story.Title, story.Genre, story.Title, story.StoryImage, story.Timestamp); // Update the title display
                 });
             }
         }
@@ -89,14 +92,16 @@ public class SaveDisplayManager : MonoBehaviour
     }
 
     // Update the UI text to show the selected story title
-    void UpdateSelectedDetails(string title, string storyID, Sprite storyImage)
+    void UpdateSelectedDetails(string title, string genre, string storyID, Sprite storyImage, long timestamp)
     {
-        if (selectedTitleText != null)
-        {
-            selectedTitleText.text = $"{title}";
-        }
+        DateTime dateSaved = TimestampConverter.ConvertTimestamp(timestamp);
+        if (selectedTitleText != null) selectedTitleText.text = $"{title}";
 
-        selectedStoryImage.sprite = storyImage;
+        if (this.selectedStoryImage != null) selectedStoryImage.sprite = storyImage;
+
+        if (this.genre != null)  this.genre.text = $"{genre}";
+
+        if (this.dateSaved != null) this.dateSaved.text = dateSaved.ToString("yyyy-MM-dd HH:mm:ss");
 
         StoryData storyData = savedStoryData.Find(story => story.storyTitle == storyID);
         if (storyData == null)

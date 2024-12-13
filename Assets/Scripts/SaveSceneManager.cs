@@ -18,6 +18,7 @@ public class SaveSceneManager : MonoBehaviour
             StoryID = story.storyTitle,
             SceneIndex = sceneIndex,
             Title = story.storyTitle,
+            Genre = story.genre,
             Timestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds()
         };
 
@@ -86,5 +87,6 @@ public struct SavedStoryData
     public string StoryID;
     public int SceneIndex;
     public string Title;
+    public string Genre;
     public long Timestamp; // Use Unix time for easy sorting
 }

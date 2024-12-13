@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7095639e6851f164a8b4688a2e18dc60, type: 3}
   m_Name: EP2
   m_EditorClassIdentifier: 
-  sceneName: 
-  introVideo: {fileID: 0}
+  sceneName: The Room of Portraits
+  introVideo: {fileID: 32900000, guid: 2d0a7be4f13ffb54295f712a7d7b23de, type: 3}
   choices:
-  - {fileID: 11400000, guid: 955d5e42fad416a4a93945e7fcc2ba9b, type: 2}
   - {fileID: 11400000, guid: dcf1c732e236e6f49844422a6298c705, type: 2}
+  - {fileID: 11400000, guid: 955d5e42fad416a4a93945e7fcc2ba9b, type: 2}

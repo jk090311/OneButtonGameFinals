@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EP4-CloseJournal
   m_EditorClassIdentifier: 
   choiceText: Close the journal
-  videoClip: {fileID: 0}
-  nextScene: {fileID: 0}
+  videoClip: {fileID: 32900000, guid: e0e5b593ff05c334b9d4e19b5e098509, type: 3}
+  nextScene: {fileID: 11400000, guid: d773ba6e0099b994094066167245e5a9, type: 2}

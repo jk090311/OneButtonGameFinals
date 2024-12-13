@@ -79,6 +79,7 @@
     <Compile Include="Assets\StorySystem\ScriptableObjects\SceneData.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\StoryDataManager.cs" />
+    <Compile Include="Assets\Scripts\TImeStampConverter.cs" />
     <Compile Include="Assets\StorySystem\ScriptableObjects\ChoiceData.cs" />
     <Compile Include="Assets\Scripts\SettingsMenuManager.cs" />
     <Compile Include="Assets\Scripts\SwipeMenu.cs" />

@@ -590,6 +590,7 @@ RectTransform:
   - {fileID: 1516906854}
   - {fileID: 1568700276}
   - {fileID: 427939502}
+  - {fileID: 881330103}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -819,7 +820,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 107681482}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1852,7 +1853,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 107681483}
-  - {fileID: 881330103}
   m_Father: {fileID: 39377503}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1880,7 +1880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1da8c10f612f94dbb39bac1be5cf5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inactivityDuration: 60
+  inactivityDuration: 10
   videoPlayer: {fileID: 1657363992}
   gameManager: {fileID: 1768696176}
   rawImage: {fileID: 881330104}
@@ -2107,7 +2107,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -830, y: 0}
+  m_AnchoredPosition: {x: -829.99994, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &427939503
@@ -4461,7 +4461,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 336189363}
+  m_Father: {fileID: 39377503}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8322,6 +8322,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 12babf7352f21df40bacebbe4e622530, type: 2}
   selectedTitleText: {fileID: 802064685}
   selectedStoryImage: {fileID: 185464135}
+  genre: {fileID: 1346298685}
+  dateSaved: {fileID: 220175925}
   deleteGameButton: {fileID: 1194982024}
   loadGameButton: {fileID: 309251115}
 --- !u!114 &1768696178
@@ -8341,6 +8343,7 @@ MonoBehaviour:
   stories:
   - {fileID: 11400000, guid: 981c5de36b6cce3498ecc6cd2a32f897, type: 2}
   - {fileID: 11400000, guid: 12babf7352f21df40bacebbe4e622530, type: 2}
+  - {fileID: 11400000, guid: 65f8613409718bc45a4f379e730210d1, type: 2}
   storyDetails: {fileID: 1384489174}
 --- !u!1 &1784287915
 GameObject:
@@ -9204,7 +9207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 42.3, y: 22.6}
+  m_AnchoredPosition: {x: 42.300003, y: 22.599998}
   m_SizeDelta: {x: 60, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1931143314

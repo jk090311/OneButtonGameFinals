@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EP5-LeavePainting
   m_EditorClassIdentifier: 
   choiceText: Leave the Painting
-  videoClip: {fileID: 0}
-  nextScene: {fileID: 0}
+  videoClip: {fileID: 32900000, guid: 9fa971b1576260a4b9053758c6ef4354, type: 3}
+  nextScene: {fileID: 11400000, guid: d773ba6e0099b994094066167245e5a9, type: 2}

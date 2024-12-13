@@ -6,6 +6,7 @@ public class StoryData : ScriptableObject
 {
     public Sprite posterImage;
     public string storyTitle;
+    public string genre;
     public string synopsis;
     public SceneData[] scenes; // Array to hold the scenes in the story
 }

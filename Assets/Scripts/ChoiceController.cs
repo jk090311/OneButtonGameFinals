@@ -11,7 +11,7 @@ public class ChoiceController : MonoBehaviour
     private Vector2 centerPosition; // Default position for the button
     public Vector2 leftPosition; // Position for highlighting Choice 1
     public Vector2 rightPosition; // Position for highlighting Choice 2
-    private int selectedChoice = 1; // 1 = Choice 1, 2 = Choice 2
+    private int selectedChoice = 0; // 1 = Choice 1, 2 = Choice 2
     private Vector2 startTouchPosition;
     private Vector2 targetPosition; // Target position for smoother animation
     private bool isSwiping = false;
@@ -23,6 +23,7 @@ public class ChoiceController : MonoBehaviour
 
     void Start()
     {
+        isVideoPlaying = true;
         EnableChoicesContainer(isVideoPlaying);
         centerPosition = new Vector2(0, controllerButton.anchoredPosition.y);
         targetPosition = centerPosition; // Initialize target position
@@ -31,21 +32,6 @@ public class ChoiceController : MonoBehaviour
             if (!isSliding && !isVideoPlaying) ConfirmChoice();
         });
     }
-
-    // void Update()
-    // {
-    //     if (!isVideoPlaying) // Prevent sliding while video is playing
-    //     {
-    //         HandleSwipe();
-    //     }
-
-    //     // Smoothly interpolate the button position to the target position
-    //     controllerButton.anchoredPosition = Vector2.Lerp(
-    //         controllerButton.anchoredPosition,
-    //         targetPosition,
-    //         Time.deltaTime * smoothFactor
-    //     );
-    // }
 
     void Update()
     {
@@ -147,15 +133,20 @@ public class ChoiceController : MonoBehaviour
         if (choice == 1)
         {
             targetPosition = new Vector2(leftPosition.x, controllerButton.anchoredPosition.y); // Move button to the left while preserving Y
-            choice1Text.color = Color.yellow; // Highlight Choice 1
-            choice2Text.color = Color.gray; // Unhighlight Choice 2
+            choice1Text.color = HighlightText(); // Keep Choice 1 highlighted
+            choice2Text.color = Color.white; // Unhighlight Choice 2
         }
         else if (choice == 2)
         {
             targetPosition = new Vector2(rightPosition.x, controllerButton.anchoredPosition.y); // Move button to the right while preserving Y
-            choice1Text.color = Color.gray; // Unhighlight Choice 1
-            choice2Text.color = Color.yellow; // Highlight Choice 2
+            choice1Text.color = Color.white; // Unhighlight Choice 1
+            choice2Text.color = HighlightText(); // Keep Choice 2 highlighted
         }
+    }
+
+    Color HighlightText()
+    {
+        return new Color(212f / 255f, 246f / 255f, 255f / 255f, 1f); // Normalize RGB values
     }
 
     void ResetButtonPosition()
@@ -165,20 +156,29 @@ public class ChoiceController : MonoBehaviour
         // Maintain the highlight for the currently selected choice
         if (selectedChoice == 1)
         {
-            choice1Text.color = Color.yellow; // Keep Choice 1 highlighted
-            choice2Text.color = Color.gray; // Unhighlight Choice 2
+            choice1Text.color = HighlightText(); // Keep Choice 1 highlighted
+            choice2Text.color = Color.white; // Unhighlight Choice 2
         }
         else if (selectedChoice == 2)
         {
-            choice1Text.color = Color.gray; // Unhighlight Choice 1
-            choice2Text.color = Color.yellow; // Keep Choice 2 highlighted
+            choice1Text.color = Color.white; // Unhighlight Choice 1
+            choice2Text.color = HighlightText(); // Keep Choice 2 highlighted
         }
     }
+
 
     public void ConfirmChoice()
     {
         Debug.Log($"Choice {selectedChoice} Confirmed");
 
+        choice1Text.color = Color.white; // Unhighlight Choice 1
+        choice2Text.color = Color.white; // Keep Choice 2 highlighted
+
+        if (selectedChoice == 0)
+        {
+            // Prompt
+            return;
+        }
         if (currentScene != null && currentScene.choices.Length >= selectedChoice)
         {
             var chosen = currentScene.choices[selectedChoice - 1];
@@ -199,6 +199,8 @@ public class ChoiceController : MonoBehaviour
         {
             Debug.LogError("Invalid choice or no choices available.");
         }
+
+        selectedChoice = 0;
     }
 
     public void EnableChoicesContainer(bool isVidPlaying)
@@ -213,22 +215,6 @@ public class ChoiceController : MonoBehaviour
         choicesContainer.gameObject.SetActive(true);
         controllerButton.GetComponent<Button>().interactable = true;
     }
-
-    // public void OnVideoEnd()
-    // {
-    //     Debug.Log("Set Video to Not Playing");
-    //     isVideoPlaying = false; // Mark video as stopped
-    //     // If there are no choices, show the end of story prompt
-    //     if (currentScene != null && currentScene.choices.Length == 0)
-    //     {
-    //         sceneManagerController.ShowEndOfStoryPrompt();
-    //         EnableChoicesContainer(true);
-    //     }
-    //     else 
-    //     {
-    //         EnableChoicesContainer(isVideoPlaying);
-    //     }
-    // }
 
     public void OnVideoEnd()
     {
