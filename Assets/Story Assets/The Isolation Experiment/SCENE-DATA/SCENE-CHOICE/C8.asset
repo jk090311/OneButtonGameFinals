@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25e33bb4abc9fe44d82f3d8c6dcf43ec, type: 3}
-  m_Name: EP6-Hammer
+  m_Name: C8
   m_EditorClassIdentifier: 
-  choiceText: Use Hammer
-  videoClip: {fileID: 0}
-  nextScene: {fileID: 11400000, guid: 163482de855c40341b672f5a8593d3d1, type: 2}
+  choiceText: Use Small weapon
+  videoClip: {fileID: 32900000, guid: 3388debd05a1a8046a027b6a726506e2, type: 3}
+  nextScene: {fileID: 11400000, guid: ee9f322e824361142ae6b2f47a313cb5, type: 2}

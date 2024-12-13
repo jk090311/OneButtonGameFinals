@@ -2251,7 +2251,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 418335743}
   m_HandleRect: {fileID: 418335742}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5693,7 +5693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1194982023
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5711,7 +5711,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 283.02, y: -158.4}
+  m_AnchoredPosition: {x: 124, y: -193.4}
   m_SizeDelta: {x: 159.82, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1194982024
@@ -5964,8 +5964,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00030517578}
-  m_SizeDelta: {x: 0, y: -0.00091553}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1252371657
 MonoBehaviour:
@@ -5980,7 +5980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
-  m_VerticalFit: 0
+  m_VerticalFit: 2
 --- !u!114 &1252371658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5999,7 +5999,7 @@ MonoBehaviour:
     m_Top: 10
     m_Bottom: 10
   m_ChildAlignment: 1
-  m_Spacing: -50
+  m_Spacing: 10
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -8319,7 +8319,7 @@ MonoBehaviour:
   saveEntryPrefab: {fileID: 4576281308338627127, guid: d3b956e1143d01b4ea58cfa528068e6c, type: 3}
   allStories:
   - {fileID: 11400000, guid: 981c5de36b6cce3498ecc6cd2a32f897, type: 2}
-  - {fileID: 11400000, guid: 65f8613409718bc45a4f379e730210d1, type: 2}
+  - {fileID: 11400000, guid: 12babf7352f21df40bacebbe4e622530, type: 2}
   selectedTitleText: {fileID: 802064685}
   selectedStoryImage: {fileID: 185464135}
   deleteGameButton: {fileID: 1194982024}

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25e33bb4abc9fe44d82f3d8c6dcf43ec, type: 3}
-  m_Name: EP2-SearchAgain
+  m_Name: C7
   m_EditorClassIdentifier: 
-  choiceText: Search the Room Again
-  videoClip: {fileID: 32900000, guid: fb083295c9a778e43852b1c9766ca2e3, type: 3}
-  nextScene: {fileID: 11400000, guid: 95f5a2aa6ba5a574085a707539a45c08, type: 2}
+  choiceText: Try Another Way
+  videoClip: {fileID: 32900000, guid: af7366a11ccb3624e877c2031599fd35, type: 3}
+  nextScene: {fileID: 11400000, guid: 5f5ef6820efce334494c2854c96afcf4, type: 2}

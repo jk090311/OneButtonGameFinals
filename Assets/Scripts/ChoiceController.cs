@@ -32,6 +32,21 @@ public class ChoiceController : MonoBehaviour
         });
     }
 
+    // void Update()
+    // {
+    //     if (!isVideoPlaying) // Prevent sliding while video is playing
+    //     {
+    //         HandleSwipe();
+    //     }
+
+    //     // Smoothly interpolate the button position to the target position
+    //     controllerButton.anchoredPosition = Vector2.Lerp(
+    //         controllerButton.anchoredPosition,
+    //         targetPosition,
+    //         Time.deltaTime * smoothFactor
+    //     );
+    // }
+
     void Update()
     {
         if (!isVideoPlaying) // Prevent sliding while video is playing
@@ -39,7 +54,7 @@ public class ChoiceController : MonoBehaviour
             HandleSwipe();
         }
 
-        // Smoothly interpolate the button position to the target position
+        // Smoothly interpolate the button position
         controllerButton.anchoredPosition = Vector2.Lerp(
             controllerButton.anchoredPosition,
             targetPosition,
@@ -62,7 +77,7 @@ public class ChoiceController : MonoBehaviour
                 {
                     if (scene.choices[1] != null)
                     {
-                        choice2Text.text = scene.choices[1].choiceText;   
+                        choice2Text.text = scene.choices[1].choiceText;
                     }
                     else
                     {
@@ -199,19 +214,35 @@ public class ChoiceController : MonoBehaviour
         controllerButton.GetComponent<Button>().interactable = true;
     }
 
+    // public void OnVideoEnd()
+    // {
+    //     Debug.Log("Set Video to Not Playing");
+    //     isVideoPlaying = false; // Mark video as stopped
+    //     // If there are no choices, show the end of story prompt
+    //     if (currentScene != null && currentScene.choices.Length == 0)
+    //     {
+    //         sceneManagerController.ShowEndOfStoryPrompt();
+    //         EnableChoicesContainer(true);
+    //     }
+    //     else 
+    //     {
+    //         EnableChoicesContainer(isVideoPlaying);
+    //     }
+    // }
+
     public void OnVideoEnd()
     {
         Debug.Log("Set Video to Not Playing");
         isVideoPlaying = false; // Mark video as stopped
-        // If there are no choices, show the end of story prompt
+
+        // If there are no choices, show the end-of-story prompt
         if (currentScene != null && currentScene.choices.Length == 0)
         {
             sceneManagerController.ShowEndOfStoryPrompt();
-            EnableChoicesContainer(true);
         }
-        else 
+        else
         {
-            EnableChoicesContainer(isVideoPlaying);
+            EnableChoicesContainer(false); // Enable choices after video ends
         }
     }
 }

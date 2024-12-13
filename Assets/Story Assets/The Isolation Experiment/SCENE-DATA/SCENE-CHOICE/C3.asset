@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25e33bb4abc9fe44d82f3d8c6dcf43ec, type: 3}
-  m_Name: EP2-InvestigateShadow
+  m_Name: C3
   m_EditorClassIdentifier: 
-  choiceText: Investigate the Shadow
-  videoClip: {fileID: 32900000, guid: 52307c4d01a3be34892adad575436dc1, type: 3}
-  nextScene: {fileID: 0}
+  choiceText: Search The Room Again
+  videoClip: {fileID: 32900000, guid: f6f14e63b71b398429f9a064e7438e70, type: 3}
+  nextScene: {fileID: 11400000, guid: f049a11fd87a513419ae6c3dffa946da, type: 2}

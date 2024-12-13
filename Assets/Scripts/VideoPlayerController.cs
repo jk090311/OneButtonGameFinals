@@ -8,19 +8,50 @@ public class VideoPlayerController : MonoBehaviour
     public ChoiceController choiceController; // Reference to the ChoiceController
     public SceneManagerController sceneManagerController; // Reference to SceneManagerController
 
+    // public void PlayScene(SceneData scene)
+    // {
+    //     if (scene.introVideo != null)
+    //     {
+    //         videoPlayer.clip = scene.introVideo;
+    //         videoPlayer.Play();
+    //     }
+    //     else
+    //     {
+    //         Debug.LogError("No intro video found for this scene.");
+    //     }
+
+    //     // Initialize the ChoiceController for this scene
+    //     if (choiceController != null)
+    //     {
+    //         choiceController.Initialize(scene, sceneManagerController);
+    //     }
+    //     else
+    //     {
+    //         Debug.LogError("ChoiceController not assigned.");
+    //     }
+
+    //     // Handle video end (if needed to trigger other behaviors)
+    //     videoPlayer.loopPointReached += OnVideoEnd;
+    // }
+
     public void PlayScene(SceneData scene)
     {
+        videoPlayer.loopPointReached -= OnVideoEnd; // Clear previous event to avoid duplicates
+
         if (scene.introVideo != null)
         {
+            Debug.Log("Playing Scene");
             videoPlayer.clip = scene.introVideo;
+            videoPlayer.isLooping = false; // Ensure the video doesn't loop
             videoPlayer.Play();
+            videoPlayer.loopPointReached += OnVideoEnd; // Trigger choices when video ends
         }
         else
         {
             Debug.LogError("No intro video found for this scene.");
         }
 
-        // Initialize the ChoiceController for this scene
+        // Initialize the ChoiceController
         if (choiceController != null)
         {
             choiceController.Initialize(scene, sceneManagerController);
@@ -29,9 +60,6 @@ public class VideoPlayerController : MonoBehaviour
         {
             Debug.LogError("ChoiceController not assigned.");
         }
-
-        // Handle video end (if needed to trigger other behaviors)
-        videoPlayer.loopPointReached += OnVideoEnd;
     }
 
     public void PlayChoice(ChoiceData choice)
@@ -48,7 +76,7 @@ public class VideoPlayerController : MonoBehaviour
             // Subscribe to event for when the video ends
             videoPlayer.loopPointReached += (VideoPlayer vp) =>
             {
-                Debug.Log("Intro Video Finished");
+                Debug.Log("Intro Video Finished");  
                 if (choice.nextScene != null)
                 {
                     Debug.Log("Loading Next Scene.........");
@@ -59,7 +87,6 @@ public class VideoPlayerController : MonoBehaviour
                     Debug.LogWarning("No next scene linked to this choice.");
                 }
             };
-
         }
         else
         {
@@ -78,6 +105,7 @@ public class VideoPlayerController : MonoBehaviour
     private void OnVideoEnd(VideoPlayer vp)
     {
         choiceController.OnVideoEnd(); // Notify ChoiceController
+        videoPlayer.Stop();
         Debug.Log("Video ended.");
     }
 }

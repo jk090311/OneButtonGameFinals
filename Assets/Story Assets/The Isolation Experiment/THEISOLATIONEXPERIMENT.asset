@@ -18,4 +18,12 @@ MonoBehaviour:
     strange sounds, and cryptic clues. Can you keep your sanity and escape, or will
     the isolation consume you? Your actions decide whether you break free or become
     another victim of the experiment\u2019s sinister secrets. "
-  scenes: []
+  scenes:
+  - {fileID: 11400000, guid: 4073dfd8830c7f94db548cad9aa207f7, type: 2}
+  - {fileID: 11400000, guid: ca720ff6ee817ef449dc197a5f76e1c9, type: 2}
+  - {fileID: 11400000, guid: f049a11fd87a513419ae6c3dffa946da, type: 2}
+  - {fileID: 11400000, guid: cd079e562fba4454f8dda03cad73ccb9, type: 2}
+  - {fileID: 11400000, guid: 5f5ef6820efce334494c2854c96afcf4, type: 2}
+  - {fileID: 11400000, guid: 251d22f926715ee4fb5a739bd205266f, type: 2}
+  - {fileID: 11400000, guid: ee9f322e824361142ae6b2f47a313cb5, type: 2}
+  - {fileID: 11400000, guid: 4868864e0f63c3a48803121692e38cd9, type: 2}

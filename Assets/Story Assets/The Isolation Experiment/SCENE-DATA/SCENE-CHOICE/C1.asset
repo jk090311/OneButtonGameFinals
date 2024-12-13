@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25e33bb4abc9fe44d82f3d8c6dcf43ec, type: 3}
-  m_Name: EP4-IgnoreNoise
+  m_Name: C1
   m_EditorClassIdentifier: 
-  choiceText: Ignore the Noise
-  videoClip: {fileID: 32900000, guid: 3ae63effb39fc004dae8474aadb44ac7, type: 3}
-  nextScene: {fileID: 11400000, guid: f21fe72851322144fa3d70e830facea3, type: 2}
+  choiceText: Investigate The Shadows
+  videoClip: {fileID: 32900000, guid: 52307c4d01a3be34892adad575436dc1, type: 3}
+  nextScene: {fileID: 11400000, guid: ca720ff6ee817ef449dc197a5f76e1c9, type: 2}

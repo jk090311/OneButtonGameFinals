@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25e33bb4abc9fe44d82f3d8c6dcf43ec, type: 3}
-  m_Name: EP1-SearchRoom
+  m_Name: C9
   m_EditorClassIdentifier: 
-  choiceText: Search the Room
-  videoClip: {fileID: 0}
-  nextScene: {fileID: 11400000, guid: a48b5e9fa6b881842b5d30d8f3606f9b, type: 2}
+  choiceText: Use Large Weapon
+  videoClip: {fileID: 32900000, guid: 9aaa673c955627a49b55c8958a6b67b4, type: 3}
+  nextScene: {fileID: 11400000, guid: 4868864e0f63c3a48803121692e38cd9, type: 2}

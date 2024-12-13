@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25e33bb4abc9fe44d82f3d8c6dcf43ec, type: 3}
-  m_Name: EP5-TryAnotherWay
+  m_Script: {fileID: 11500000, guid: 7095639e6851f164a8b4688a2e18dc60, type: 3}
+  m_Name: End 3
   m_EditorClassIdentifier: 
-  choiceText: Try Another Way
-  videoClip: {fileID: 0}
-  nextScene: {fileID: 11400000, guid: 9682f9d6b7f176f48a37d665fb6c33a7, type: 2}
+  sceneName: End 3
+  introVideo: {fileID: 32900000, guid: 3cd726177a50c9f4fbe492786b823c3d, type: 3}
+  choices: []

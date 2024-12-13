@@ -10,6 +10,8 @@ public class SaveSceneManager : MonoBehaviour
     {
         string storyKey = $"{story.storyTitle}_Data";
 
+        Debug.Log(storyKey);
+
         SavedStoryData data = new SavedStoryData
         {
             StoryImage = story.posterImage,
@@ -50,11 +52,14 @@ public class SaveSceneManager : MonoBehaviour
         {
             string storyKey = $"{story.storyTitle}_Data";
 
+            Debug.Log("Get All Saves "+ storyKey);
+
             if (PlayerPrefs.HasKey(storyKey))
             {
                 string json = PlayerPrefs.GetString(storyKey);
                 SavedStoryData data = JsonUtility.FromJson<SavedStoryData>(json);
                 savedStories.Add(data);
+                Debug.Log(true);
             }
         }
 

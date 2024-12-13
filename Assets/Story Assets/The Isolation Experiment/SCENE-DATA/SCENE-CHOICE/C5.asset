@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25e33bb4abc9fe44d82f3d8c6dcf43ec, type: 3}
-  m_Name: EP4-InvestigateWall
+  m_Name: C5
   m_EditorClassIdentifier: 
-  choiceText: Investigate the Noise
+  choiceText: Go Berserk
   videoClip: {fileID: 32900000, guid: 0af0a139baa04eb4aaa3cc75d99734df, type: 3}
-  nextScene: {fileID: 11400000, guid: f21fe72851322144fa3d70e830facea3, type: 2}
+  nextScene: {fileID: 11400000, guid: 251d22f926715ee4fb5a739bd205266f, type: 2}

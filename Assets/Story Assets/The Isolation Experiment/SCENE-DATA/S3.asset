@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7095639e6851f164a8b4688a2e18dc60, type: 3}
+  m_Name: S3
+  m_EditorClassIdentifier: 
+  sceneName: Calm yourself
+  introVideo: {fileID: 32900000, guid: 3ae63effb39fc004dae8474aadb44ac7, type: 3}
+  choices:
+  - {fileID: 11400000, guid: f1fd597dd8669a64796d686410718e6c, type: 2}
+  - {fileID: 11400000, guid: 2ca3ee06d3c608041904e10e36cafd72, type: 2}

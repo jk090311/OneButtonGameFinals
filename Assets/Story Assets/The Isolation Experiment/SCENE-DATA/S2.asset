@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7095639e6851f164a8b4688a2e18dc60, type: 3}
+  m_Name: S2
+  m_EditorClassIdentifier: 
+  sceneName: Search Deeper
+  introVideo: {fileID: 32900000, guid: fb083295c9a778e43852b1c9766ca2e3, type: 3}
+  choices:
+  - {fileID: 11400000, guid: b7bca0e29df5d824192d4effa430659b, type: 2}
+  - {fileID: 11400000, guid: 3e834faa6f4634844a7c16217e1cde14, type: 2}

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25e33bb4abc9fe44d82f3d8c6dcf43ec, type: 3}
-  m_Name: EP1-Sit
+  m_Name: C2
   m_EditorClassIdentifier: 
-  choiceText: Sit and Wait
+  choiceText: Just Wait
   videoClip: {fileID: 32900000, guid: 69431e2d4e5d3b741a9dc899c34cf0fc, type: 3}
-  nextScene: {fileID: 11400000, guid: 0b635e5932df9d848b1b505fcde768b4, type: 2}
+  nextScene: {fileID: 11400000, guid: 251d22f926715ee4fb5a739bd205266f, type: 2}
