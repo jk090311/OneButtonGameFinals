@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choiceText: Approach the Painting
   videoClip: {fileID: 32900000, guid: 489df96181129474fb8eb00e576979bd, type: 3}
-  nextScene: {fileID: 11400000, guid: 5b64c6a123e02d142a4cc89a10c63aac, type: 2}
+  nextScene: {fileID: 11400000, guid: e0b6e2da21c9c244391826840c0ac16c, type: 2}

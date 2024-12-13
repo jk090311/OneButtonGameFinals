@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posterImage: {fileID: 0}
   storyTitle: Shadows of the Forgotten
-  synopsis: 
+  synopsis: 'In the eerie and abandoned CEIT Building of Pamantasan ng Lungsod ng
+    Valenzuela (PLV), a legend surrounds a reclusive art professor who went mad and
+    vanished decades ago. As a curious student, you are drawn to explore the forgotten
+    halls, only to uncover that the professor''s spirit may still be lingering, driven
+    to complete one last, twisted masterpiece. '
   scenes:
   - {fileID: 11400000, guid: 04f5d9fdb86bf134fba3b8554be0716b, type: 2}
   - {fileID: 11400000, guid: 4d49147c846848d48b5afa438850e795, type: 2}
