@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EP1-IgnoreNote
   m_EditorClassIdentifier: 
   choiceText: Ignore the note
-  videoClip: {fileID: 0}
-  nextScene: {fileID: 0}
+  videoClip: {fileID: 32900000, guid: 7bb28268251d89f4ebd46d1093343083, type: 3}
+  nextScene: {fileID: 11400000, guid: d773ba6e0099b994094066167245e5a9, type: 2}

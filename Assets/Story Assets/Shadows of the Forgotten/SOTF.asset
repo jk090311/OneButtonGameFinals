@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 629d685674f504945a8a9dedd6922f61, type: 3}
+  m_Name: SOTF
+  m_EditorClassIdentifier: 
+  posterImage: {fileID: 0}
+  storyTitle: Shadows of the Forgotten
+  synopsis: 
+  scenes:
+  - {fileID: 11400000, guid: 04f5d9fdb86bf134fba3b8554be0716b, type: 2}
+  - {fileID: 11400000, guid: 4d49147c846848d48b5afa438850e795, type: 2}
+  - {fileID: 11400000, guid: cbfde7ade9688d249a6db111e5663b87, type: 2}
+  - {fileID: 11400000, guid: d2658c389c558524b888b82a73290dd3, type: 2}
+  - {fileID: 11400000, guid: 247b69e5c9d0019468fe1919d7c87eff, type: 2}
+  - {fileID: 11400000, guid: 5b64c6a123e02d142a4cc89a10c63aac, type: 2}
+  - {fileID: 11400000, guid: e0b6e2da21c9c244391826840c0ac16c, type: 2}

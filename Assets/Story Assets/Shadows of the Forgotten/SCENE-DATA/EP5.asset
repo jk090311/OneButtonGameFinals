@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7095639e6851f164a8b4688a2e18dc60, type: 3}
   m_Name: EP5
   m_EditorClassIdentifier: 
-  sceneName: 
-  introVideo: {fileID: 0}
+  sceneName: The Cursed Painting
+  introVideo: {fileID: 32900000, guid: 65af8f2a2a8f7b947b5c896603cd70a8, type: 3}
   choices:
   - {fileID: 11400000, guid: e46a446821d727b44baa8ac161020870, type: 2}
   - {fileID: 11400000, guid: 64f1ec41d8dbac248b3dfe65317b1308, type: 2}

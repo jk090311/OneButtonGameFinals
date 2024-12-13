@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7095639e6851f164a8b4688a2e18dc60, type: 3}
   m_Name: EP3
   m_EditorClassIdentifier: 
-  sceneName: 
-  introVideo: {fileID: 0}
+  sceneName: The Mysterious Portrait
+  introVideo: {fileID: 32900000, guid: 8a7c9e0716e16d641880e43dd4c95761, type: 3}
   choices:
   - {fileID: 11400000, guid: 23a3571feb7ef1d43ad504f1dec585db, type: 2}
   - {fileID: 11400000, guid: 640e892b6b173fe488e25d7a5b23bfde, type: 2}

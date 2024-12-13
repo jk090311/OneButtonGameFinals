@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EP5-ApproachPainting
   m_EditorClassIdentifier: 
   choiceText: Approach the Painting
-  videoClip: {fileID: 0}
-  nextScene: {fileID: 0}
+  videoClip: {fileID: 32900000, guid: 489df96181129474fb8eb00e576979bd, type: 3}
+  nextScene: {fileID: 11400000, guid: 5b64c6a123e02d142a4cc89a10c63aac, type: 2}
