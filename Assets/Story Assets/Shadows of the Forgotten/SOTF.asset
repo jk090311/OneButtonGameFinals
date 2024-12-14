@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629d685674f504945a8a9dedd6922f61, type: 3}
   m_Name: SOTF
   m_EditorClassIdentifier: 
-  posterImage: {fileID: 0}
+  posterImage: {fileID: 21300000, guid: 6ae474d122009924b81dee025eaaf9c4, type: 3}
   storyTitle: Shadows of the Forgotten
   genre: Mystery
   synopsis: 'In the eerie and abandoned CEIT Building of Pamantasan ng Lungsod ng
@@ -20,6 +20,7 @@ MonoBehaviour:
     vanished decades ago. As a curious student, you are drawn to explore the forgotten
     halls, only to uncover that the professor''s spirit may still be lingering, driven
     to complete one last, twisted masterpiece. '
+  storyMusic: {fileID: 8300000, guid: bb0989271cb4a964298631e35af42eb6, type: 3}
   scenes:
   - {fileID: 11400000, guid: 04f5d9fdb86bf134fba3b8554be0716b, type: 2}
   - {fileID: 11400000, guid: 4d49147c846848d48b5afa438850e795, type: 2}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choiceText: Use Large Weapon
   videoClip: {fileID: 32900000, guid: 9aaa673c955627a49b55c8958a6b67b4, type: 3}
-  nextScene: {fileID: 11400000, guid: 4868864e0f63c3a48803121692e38cd9, type: 2}
+  nextScene: {fileID: 11400000, guid: ee9f322e824361142ae6b2f47a313cb5, type: 2}

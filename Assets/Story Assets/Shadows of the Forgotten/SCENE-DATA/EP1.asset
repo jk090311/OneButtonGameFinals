@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EP1
   m_EditorClassIdentifier: 
   sceneName: The Mystery Note
-  introVideo: {fileID: 32900000, guid: ee8b00d3029c9214e8576846e6114feb, type: 3}
+  introVideo: {fileID: 32900000, guid: dd35b2f49fb086844852ca1e098de6ef, type: 3}
   choices:
   - {fileID: 11400000, guid: 804f626ad70e5bf4d948f41a34492d07, type: 2}
   - {fileID: 11400000, guid: 7150155b59adafe4d8a9eca3ff31a7b5, type: 2}

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
+
 public class SceneManagerController : MonoBehaviour
 {
     public static StoryData currentStory; // The active story
@@ -11,11 +12,16 @@ public class SceneManagerController : MonoBehaviour
     public VideoPlayerController videoPlayerController; // Reference to the VideoPlayerController
     public ChoiceController choiceController;
     public GameplayManager gameplayManager;
+    public AudioSource audioSource;
+    private AudioClip audioClip;
     public VideoPlayer videoPlayer;
     public Animator endPromptPanelAnimator;
 
+    
     void Start()
     {
+        audioSource.clip = currentStory.storyMusic;
+        audioSource.Play();
         videoPlayer.clip = null;
         if (currentStory != null && currentStory.scenes.Length > 0)
         {
@@ -58,6 +64,8 @@ public class SceneManagerController : MonoBehaviour
     {
         Debug.Log("The story has ended. Displaying the end of story prompt.");
         TransitionManager.EndingPromptOpen(endPromptPanelAnimator);
+        audioSource.Stop();
+        audioSource.clip = null;
     }
 
     public void RestartStory()
