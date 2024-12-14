@@ -53,7 +53,8 @@ public class SaveDisplayManager : MonoBehaviour
             TextMeshProUGUI saveText = saveEntry.GetComponentInChildren<TextMeshProUGUI>();
             if (saveText != null)
             {
-                saveText.text = $"{story.Title} - Scene {story.SceneIndex}";
+                DateTime dateSaved = TimestampConverter.ConvertTimestamp(story.Timestamp);
+                saveText.text = $"{story.Title} - {dateSaved.ToString("yyyy-MM-dd")}";
             }
 
             // Add functionality to the Load button

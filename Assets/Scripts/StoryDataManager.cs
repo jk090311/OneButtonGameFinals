@@ -19,7 +19,7 @@ public class StoryDataManager : MonoBehaviour
         
         // Update the visual elements
         posterImage.sprite = story.posterImage;
-        title.text = story.storyTitle;
+        title.text = story.genre;
         
         // Attach the button's functionality dynamically
         GetComponent<Button>().onClick.RemoveAllListeners(); // Clear previous listeners if any
